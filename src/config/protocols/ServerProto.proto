@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package server;
+
+service Server {
+  rpc simpleRpc(RpcRequest) returns (RpcResponse) {}
+  rpc serverSideRpcStreaming(RpcRequest) returns (stream RpcResponse) {}
+  rpc clientSideRpcStreaming(stream RpcRequest) returns (RpcResponse) {}
+  rpc bidirectionalRpcStreaming(stream RpcRequest) returns (stream RpcResponse) {}
+}
+
+message RpcRequest {
+  string requestName = 1;
+  int32 requestInteger = 2;
+  bool requestBoolean = 3;
+  float requestFloating = 4;
+}
+
+message RpcResponse {
+  string responseName = 1;
+  int32 responseInteger = 2;
+  bool responseBoolean = 3;
+  float responseFloating = 4;
+}
