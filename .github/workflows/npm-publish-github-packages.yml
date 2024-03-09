@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 20.11.1
           registry-url: https://npm.pkg.github.com/
-          scope: '@IgorEmerick'
+          scope: '@igoremerick'
       - run: npm install
       - run: npm run build
       - run: npm publish
