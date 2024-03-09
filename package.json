@@ -1,5 +1,5 @@
 {
-  "name": "grpc-node-client",
+  "name": "@IgorEmerick/grpc-node-client",
   "version": "1.0.0",
   "description": "A NodeJS gRPC client example.",
   "main": "./dist/index.js",
